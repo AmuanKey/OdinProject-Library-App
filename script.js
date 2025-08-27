@@ -52,12 +52,17 @@ Form.addEventListener("submit", (event) => {
     ToggleBtn.textContent = element.read ? "Mark as unread" : "Mark as read";
     ToggleBtn.addEventListener("click",()=>{
       element.toggleRead();
-      Read.textContent = element.read ? "Read" : "Not read yet";
+      Read.textContent =element.read ? "Read" : "Not read yet";
       ToggleBtn.textContent = element.read ? "Mark as unread" : "Mark as read";    })
     Title.textContent = element.title;
-    Author.textContent = element.author;
-    Pages.textContent = element.pages;
-    Read.textContent = element.read ? "Read" : "Not read yet";
+    Author.textContent ="Author : "+ element.author;
+    Pages.textContent ="Pages : " +  element.pages;
+    Read.textContent = "Status : " + (element.read ? "Read" : "Not read yet");
+
+    [Title, Author, Pages, Read].forEach(item => item.classList.add("white"));
+    ToggleBtn.classList.add("button");
+    DelBtn.classList.add("button");
+    DelBtn.classList.add("deleteBtn");
 
     Container.append(Title, Author, Pages, Read, ToggleBtn,DelBtn);
     Container.classList.add("book-section");
@@ -68,7 +73,7 @@ Form.addEventListener("submit", (event) => {
    myLibrary = myLibrary.filter(book => book.id !== element.id);
       Container.remove();
     });
-  console.log("arrat", myLibrary);
+ 
 
   }
   Dialog.removeAttribute("open");

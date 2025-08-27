@@ -5,23 +5,38 @@
 }
 
 .book-container{
-    background-color: greenyellow;
+    padding: 20px;
+    height: 100%;
 }
 .Title{
     color: rgb(92, 119, 50);
 }
 .book-section{
-    background-color: brown;
+    background-color: rgb(72, 82, 57);;
     padding: 1rem;
+    margin: 1rem;
     
+}
+.button{
+    background-color: green;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 5px grey;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .book-section-container{
     
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 20%);
+    grid-template-columns: repeat(4, 22%);
     
+}
+
+.white{
+    color: #fff;
 }
 .form{
     display: flex;
@@ -30,8 +45,31 @@
 }
 .input{
     margin-top: 10px;
+    width: 200px;
+    height: 24px;
+    padding-left: 5px;
 
 }
 .x:hover{
+    background-color: red;
+    color: wheat;
+}
+.x-container{
+    display: flex;
+    justify-content: end;
+}
+.x{
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    
+}
+.deleteBtn{
+    background-color: red;
 }

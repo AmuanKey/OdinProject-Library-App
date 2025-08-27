@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,10 +11,10 @@
 
     <div class="book-container">
         <h2 class="Title">Book Selection</h2>
-        <button id="button">Add new Book</button>
+        <button id="button" class="button">Add new Book</button>
         <dialog  id="add-dialog">
             <form id="form" class="form" action="post" >
-                <div>
+                <div class="x-container">
                     <h2 id="x" class="x">x</h2>
                 </div>
                 <input class="input" name="title" type="text" placeholder="Title">
@@ -25,7 +25,7 @@
                 <label for="read-status">Read</label>
                 </div>
        
-                <button type="submit">Add Book</button>
+                <button class="button" type="submit">Add Book</button>
             </form>
         </dialog>
         <div id="Book-Container" class="book-section-container">
